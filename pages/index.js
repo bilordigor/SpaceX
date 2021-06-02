@@ -39,6 +39,7 @@ export default function Home() {
       <Header>
         <ImgWrapper>
           <Image
+            alt="SpaceX Logo"
             src="/spacex-logo-black-and-white.png"
             width={320}
             height={48}

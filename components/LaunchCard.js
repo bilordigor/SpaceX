@@ -73,6 +73,7 @@ export default function LaunchCard({ name, details, date, success, patch }) {
       <ImgOffset>
         <ImgWrapper >
           <Image
+            alt="Launch Logo"
             src={patch != undefined ? patch : "/defaultShip.png"}
             width={96}
             height={96}

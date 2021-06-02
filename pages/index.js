@@ -29,9 +29,6 @@ const ImgWrapper = styled.div`
 
 
 export default function Home() {
-
-
-
   
   return (
     <Container>
@@ -43,7 +40,6 @@ export default function Home() {
         <ImgWrapper>
           <Image
             src="/spacex-logo-black-and-white.png"
-            //layout="intrinsic"
             width={320}
             height={48}
           />

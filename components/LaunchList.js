@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
 import styled, { keyframes } from "styled-components"
 import LaunchCard from './LaunchCard'
-
 import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 
 const Container = styled.div` 
@@ -26,7 +23,6 @@ const Item = styled.div`
   
   
 `
-
 
 const animationName = keyframes`
   0% { transform: rotate(0deg); }
@@ -58,15 +54,12 @@ const AllLoad = styled.div`
 `
 
 
-
 export default function LaunchList() {
 
   const [launches, setLaunches] = useState([])
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(true)
   const [allLoading, setAllLoading] = useState(false)
-
-
 
   async function postData(url = '', data = {}) {
     // Default options are marked with *
@@ -129,8 +122,6 @@ export default function LaunchList() {
 
   useBottomScrollListener(bottomLoading, {
     offset: 200,
-    // debounce: 0,
-    // triggerOnNoScroll: true
   });
 
   return (

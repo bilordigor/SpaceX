@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components'
 
@@ -29,7 +28,6 @@ const ImgWrapper = styled.div`
 
 const Content = styled.div`
   display: flex;
-  
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 16px;
@@ -46,7 +44,6 @@ const Typography = styled.p`
 `
 
 const ShipLabel = styled.div`
-
   font-family: 'Roboto', sans-serif;
   margin: 16px 16px 8px 82px;
   font-size: 36px;
@@ -67,11 +64,9 @@ const Divider = styled.div`
   height: 2px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.divider};
-
 `
 
 export default function LaunchCard({ name, details, date, success, patch }) {
-
 
   return (
     <Card success={success}>
@@ -97,7 +92,6 @@ export default function LaunchCard({ name, details, date, success, patch }) {
           {details != undefined ? details : "No description :("}
         </Typography>
       </Content>
-
     </Card>
   )
 }

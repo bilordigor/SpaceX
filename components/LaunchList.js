@@ -88,18 +88,18 @@ export default function LaunchList() {
       },
     })
       .then((data) => {
-        console.log("data", data); // JSON data parsed by `response.json()` call
+        
         setLaunches(data.docs)
         setPage(2)
         setLoading(false)
         if (!data.hasNextPage) setAllLoading(true)
-        console.log("launches", launches)
+        
       });
   }, [])
 
   const bottomLoading = () => {
     if (!allLoading) {
-      console.log("Upload")
+      
       setLoading(true)
       postData('https://api.spacexdata.com/v4/launches/query', {
         "query": {},
@@ -109,7 +109,6 @@ export default function LaunchList() {
         },
       })
         .then((data) => {
-          console.log("data", data); // JSON data parsed by `response.json()` call
           setLaunches([...launches, ...data.docs])
           let newPage = page + 1
           setLoading(false)

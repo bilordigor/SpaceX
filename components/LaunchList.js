@@ -91,7 +91,7 @@ export default function LaunchList() {
       "query": {},
       "options": {
         page: page,
-        limit: 20,
+        limit: 16,
       },
     })
       .then((data) => {
